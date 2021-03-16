@@ -43,3 +43,7 @@ jobs:
         run: |
           php artisan migrate
           php artisan db:seed
+      - name: Upload
+        uses: 'actions/upload-artifact@v2'
+        with:
+          path: ${{ github.workspace }}
